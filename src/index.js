@@ -75,11 +75,11 @@ function flow(arg, functions) {
 }
 
 export default function generateSchemaModules(introspectionResponse, bundleName, whitelistConfig) {
-  const schema = (() => {
-    if (!!response.data) {
+  const schema = ((response) => {
+    if (response.data) {
       return response.data.__schema;
     }
-    
+
     return response.__schema;
   })(introspectionResponse);
 
