@@ -75,7 +75,13 @@ function flow(arg, functions) {
 }
 
 export default function generateSchemaModules(introspectionResponse, bundleName, whitelistConfig) {
-  const schema = introspectionResponse.data.__schema;
+  const schema = (() => {
+    if ('data' in response) {
+      return response.data.__schema;
+    }
+    
+    return response.__schema;
+  })(introspectionResponse);
 
   return flow(schema, [
     yieldTypes,
