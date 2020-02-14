@@ -2,8 +2,8 @@
   "name": "graphql-js-schema",
   "version": "0.7.1",
   "description": "Transforms the JSON representation of a GraphQL schema into a set of ES6 type modules.",
-  "main": "lib/index.js",
-  "bin": "lib/cli.js",
+  "main": "src/index.js",
+  "bin": "src/cli.js",
   "license": "MIT",
   "author": "Shopify Inc.",
   "dependencies": {
